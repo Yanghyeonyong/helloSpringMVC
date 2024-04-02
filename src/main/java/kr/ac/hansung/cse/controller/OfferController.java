@@ -1,5 +1,6 @@
 package kr.ac.hansung.cse.controller;
 
+//import kr.ac.hansung.cse.model.Course;
 import kr.ac.hansung.cse.model.Offer;
 import kr.ac.hansung.cse.service.OfferService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +28,16 @@ public class OfferController {
 
         return "offers";
     }
+    @GetMapping("/courses")
+    public String showCourses(Model model) {
+        List<Offer> courses = offerService.getAllOffers();
+        model.addAttribute("id_courses",courses);
 
+        return "courses";
+    }
+
+
+//
     @GetMapping("/createoffer")
     public String createOffer(Model model) {
 

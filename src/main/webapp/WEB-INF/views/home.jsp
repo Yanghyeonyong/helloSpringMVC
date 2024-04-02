@@ -14,8 +14,9 @@
   </head>
   <body>
     <p> <a href="${pageContext.request.contextPath}/offers"> Show current offers</a></p>
+    <p> <a href="${pageContext.request.contextPath}/courses"> courses</a></p>
     <p> <a href="${pageContext.request.contextPath}/createoffer"> Add a new offer</a></p>
-
+    Hello World
     <c:if test="${pageContext.request.userPrincipal.name != null}">
       <a href="javascript:document.getElementById('logout').submit()">Logout</a>
     </c:if>
